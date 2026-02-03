@@ -1,6 +1,7 @@
 package Biblio;
 
 public class Libro {
+
     private String autor;
     private String titulo;
     private int ejemplaresVendidos;
@@ -38,4 +39,15 @@ public class Libro {
             System.out.println("El título de la precuela de " + libro.titulo + "es: " + libro);
         }
     }
+    public void registrarVenta(int ventas){
+        if (ventas > 0){
+            this.ejemplaresVendidos += ventas;
+        }
+        else {
+            System.out.println("No se pueden registrar 0 ventas o ventas negativas");
+        }
+    }
+
+
+
 }
