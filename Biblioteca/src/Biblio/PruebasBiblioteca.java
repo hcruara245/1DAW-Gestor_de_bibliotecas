@@ -7,5 +7,10 @@ public class PruebasBiblioteca {
         Libro libro3 = new Libro("Hugo", "Mein Kampf");
 
         libro1.addSecuela(libro2);
+        libro2.addSecuela(libro3);
+        libro1.obtenerTituloPrecuela();
+        libro2.obtenerTituloPrecuela();
+        libro2.obtenerTituloSecuela();
+        libro3.obtenerTituloSecuela();
     }
 }
