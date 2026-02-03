@@ -65,6 +65,18 @@ public class Libro {
         }
     }
     void mostrarResumenSaga () {
-        
+
+    }
+
+    public Libro[] obtenerSaga(){
+        Libro[] librosSaga = new Libro[0];
+
+
+
+        return librosSaga;
+    }
+
+    public void obtenerInformacion(){
+        System.out.println("El libro " + this.titulo + " es de " + this.autor + " y ha vendido un total de: " + this.ejemplaresVendidos + " ejemplares");
     }
 }
