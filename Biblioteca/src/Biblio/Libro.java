@@ -17,35 +17,43 @@ public class Libro {
             this.titulo = "";
         }
     }
+    
     public String getAutor() {
         return autor;
     }
+
     public String getTitulo() {
         return titulo;
     }
+
     public int getEjemplaresVendidos() {
         return ejemplaresVendidos;
     }
+
     public Libro getPrecuela() {
         return precuela;
     }
+
     public Libro getSecuela() {
         return secuela;
     }
-    void obtenerTituloPrecuela (Libro libro) {
-        if (libro.precuela == null) {
-            System.out.println("El titulo de la precuela de " + libro.titulo + "es: <NINGUNO>");
+
+    void obtenerTituloPrecuela () {
+        if (this.precuela == null) {
+            System.out.println("El titulo de la precuela de " + this.titulo + " es: <NINGUNO>");
         } else {
-            System.out.println("El título de la precuela de " + libro.titulo + "es: " + libro.precuela.titulo);
+            System.out.println("El título de la precuela de " + this.titulo + " es: " + this.precuela.titulo);
         }
     }
-    void obtenerTituloSecuela (Libro libro) {
-        if (libro.secuela == null) {
-            System.out.println("El titulo de la secuela de " + libro.titulo + "es: <NINGUNO>");
+
+    void obtenerTituloSecuela () {
+        if (this.secuela == null) {
+            System.out.println("El titulo de la secuela de " + this.titulo + " es: <NINGUNO>");
         } else {
-            System.out.println("El titulo de la secuela de " + libro.titulo + "es: " + libro.secuela.titulo);
+            System.out.println("El titulo de la secuela de " + this.titulo + " es: " + this.secuela.titulo);
         }
     }
+
     public void registrarVenta(int ventas){
         if (ventas > 0){
             this.ejemplaresVendidos += ventas;
