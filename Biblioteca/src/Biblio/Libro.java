@@ -1,5 +1,7 @@
 package Biblio;
 
+import java.util.Arrays;
+
 public class Libro {
 
     private String autor;
@@ -77,6 +79,26 @@ public class Libro {
 
     public Libro[] obtenerSaga(){
         Libro[] librosSaga = new Libro[0];
+        Libro primerLibro = this;
+        Libro ultimoLibro = this;
+        
+        while (primerLibro.getPrecuela() != null){
+            primerLibro = primerLibro.getPrecuela();
+        }
+
+        librosSaga = Arrays.copyOf(librosSaga, librosSaga.length + 1);
+        librosSaga[0] = primerLibro;
+        ultimoLibro = primerLibro.getSecuela();
+
+        while (ultimoLibro.getSecuela() != null){
+            librosSaga = Arrays.copyOf(librosSaga, librosSaga.length + 1);
+            librosSaga[librosSaga.length - 1] = ultimoLibro;
+            ultimoLibro = ultimoLibro.getSecuela();
+        }
+
+        librosSaga = Arrays.copyOf(librosSaga, librosSaga.length + 1);
+        librosSaga[librosSaga.length - 1] = ultimoLibro;
+
 
         return librosSaga;
     }
