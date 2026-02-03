@@ -65,13 +65,18 @@ public class Libro {
         }
     }
     void mostrarResumenSaga () {
-
+//        Libro primerLibro = null;
+//        Libro[] saga = new Libro[0];
+//        while (this.secuela != null) {
+//            while (primerLibro.precuela != null) {
+//                primerLibro.precuela = this.precuela;
+//            }
+//            while ()
+//        }
     }
 
     public Libro[] obtenerSaga(){
         Libro[] librosSaga = new Libro[0];
-
-
 
         return librosSaga;
     }
