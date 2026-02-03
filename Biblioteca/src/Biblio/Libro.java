@@ -33,10 +33,17 @@ public class Libro {
         return secuela;
     }
     void obtenerTituloPrecuela (Libro libro) {
-        if (libro == null) {
-            System.out.println("Esta obra no posee ninguna precuela.");
+        if (libro.precuela == null) {
+            System.out.println("El titulo de la precuela de " + libro.titulo + "es: <NINGUNO>");
         } else {
-            System.out.println("El título de la precuela de " + libro.titulo + "es: " + libro);
+            System.out.println("El título de la precuela de " + libro.titulo + "es: " + libro.precuela.titulo);
+        }
+    }
+    void obtenerTituloSecuela (Libro libro) {
+        if (libro.secuela == null) {
+            System.out.println("El titulo de la secuela de " + libro.titulo + "es: <NINGUNO>");
+        } else {
+            System.out.println("El titulo de la secuela de " + libro.titulo + "es: " + libro.secuela.titulo);
         }
     }
     public void registrarVenta(int ventas){
