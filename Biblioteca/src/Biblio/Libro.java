@@ -64,4 +64,7 @@ public class Libro {
             System.out.println("La secuela no es correcta");
         }
     }
+    void mostrarResumenSaga () {
+        
+    }
 }
