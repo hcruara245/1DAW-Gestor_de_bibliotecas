@@ -55,6 +55,13 @@ public class Libro {
         }
     }
 
-
-
+    public void addSecuela(Libro secuela){
+        if (secuela != null){
+            this.secuela = secuela;
+            secuela.precuela = this;
+        }
+        else {
+            System.out.println("La secuela no es correcta");
+        }
+    }
 }
