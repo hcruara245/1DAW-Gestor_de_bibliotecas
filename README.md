@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 Developing branch just to try code and merge with main
-=======
 - Creación de Gestor de Biblioteca desde una clase ejecutable
 - Clase Libro contiene:
 -   Precuela
@@ -18,4 +16,3 @@ Developing branch just to try code and merge with main
 -   Obtener información
 
 En la clase Main se irán probando las diferentes funciones
->>>>>>> 3f6b5dee687bb2db8d69464c80c27b99a3ee613b
