@@ -67,14 +67,18 @@ public class Libro {
         }
     }
     void mostrarResumenSaga () {
-//        Libro primerLibro = null;
-//        Libro[] saga = new Libro[0];
-//        while (this.secuela != null) {
-//            while (primerLibro.precuela != null) {
-//                primerLibro.precuela = this.precuela;
-//            }
-//            while ()
-//        }
+        Libro[] saga = obtenerSaga();
+        int ventasTotales = 0;
+        int j = 0;
+        int posLibro = -1;
+        for (int i = 0; i < saga.length; i++) {
+            ventasTotales += saga[i].ejemplaresVendidos;
+        }
+        do {
+            j++;
+            posLibro++;
+        } while (!saga[posLibro].getTitulo().equalsIgnoreCase(this.titulo));
+        System.out.println("El libro " + this.titulo + " es el libro numero " + j + " de una saga que tiene " + saga.length + " libros. Esta saga ha vendido un total de " + ventasTotales + " ejemplares.");
     }
 
     public Libro[] obtenerSaga(){
