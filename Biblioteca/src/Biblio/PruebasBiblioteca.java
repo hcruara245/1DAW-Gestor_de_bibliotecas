@@ -1,5 +1,7 @@
 package Biblio;
 
+import java.util.Arrays;
+
 public class PruebasBiblioteca {
     public static void main(String[] args) {
         Libro libro1 = new Libro("Juan de la Palmilla", "El que mete las manos");
@@ -16,13 +18,21 @@ public class PruebasBiblioteca {
         libro3.addSecuela(libro4);
 
         libro1.obtenerTituloPrecuela();
+        System.out.println();
         libro2.obtenerTituloPrecuela();
+        System.out.println();
         libro2.obtenerTituloSecuela();
+        System.out.println();
         libro3.obtenerTituloSecuela();
+        System.out.println();
 
-        System.out.println("PRUEBA SAGAAA");
-        libro1.mostrarResumenSaga();
+        Libro libro6 = new Libro("Dross", "Luna de Plutón");
+        libro2.anadirSiguienteEnSaga(libro6);
+        libro2.obtenerTituloSecuela();
+        libro6.obtenerTituloSecuela();
+        Libro[] siguientesLibrosLibro2 = libro2.mostrarLibrosSiguientes();
 
+        System.out.println(Arrays.toString(siguientesLibrosLibro2));
 
     }
 }
