@@ -15,4 +15,4 @@ Developing branch just to try code and merge with main
 -   anadir Secuela
 -   Obtener información
 
-En la clase Main se irán probando las diferentes funciones
+En la clase Ejercicio1 se irán probando las diferentes funciones
