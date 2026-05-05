@@ -19,6 +19,15 @@ public class Libro {
             this.titulo = "";
         }
     }
+
+    public void setPrecuela(Libro precuela) {
+        this.precuela = precuela;
+    }
+
+    public void setSecuela(Libro secuela) {
+        this.secuela = secuela;
+    }
+
     public String getAutor() {
         return autor;
     }
@@ -110,4 +119,46 @@ public class Libro {
     public void obtenerInformacion(){
         System.out.println("El libro " + this.titulo + " es de " + this.autor + " y ha vendido un total de: " + this.ejemplaresVendidos + " ejemplares");
     }
+<<<<<<< HEAD
 }
+=======
+
+    public void anadirSiguienteEnSaga (Libro nuevo) {
+        Libro[] sagaActual = this.obtenerSaga();
+        Libro siguienteExistente;
+        if (this.secuela != null) {
+            for (int i = 0; i < sagaActual.length; i++) {
+                if (this == sagaActual[i]) {
+                    siguienteExistente = this.secuela;
+                    this.secuela = nuevo;
+                    this.secuela.secuela = siguienteExistente;
+                }
+            }
+        } else {
+            addSecuela(nuevo);
+        }
+    }
+
+    public Libro[] mostrarLibrosSiguientes () {
+        Libro[] siguientesLibros = new Libro[0];
+        Libro[] sagaActual = this.obtenerSaga();
+        int contador = 0;
+        boolean introducido = false;
+
+        while (!introducido) {
+            if (this.secuela == sagaActual[contador]) {
+                for (int j = 0; j < (sagaActual.length-contador); j++) {
+                    siguientesLibros = Arrays.copyOf(siguientesLibros, siguientesLibros.length+1);
+                    siguientesLibros[siguientesLibros.length-1] = sagaActual[j].secuela;
+                }
+                introducido = true;
+            } else if (sagaActual[contador].secuela == null) {
+                System.out.println("El libro no tiene continuaciones.");
+                introducido = true;
+            }
+            contador++;
+        }
+        return siguientesLibros;
+    }
+}
+>>>>>>> 6bf3f4870b06ae16d91be5fdd83b3006b150530b
