@@ -2,10 +2,10 @@ package Biblio;
 
 public class PruebasBiblioteca {
     public static void main(String[] args) {
-        Libro libro1 = new Libro("Juan de la Palmilla", "El que mete las manos");
-        Libro libro2 = new Libro("Victor", "Los secretos de YT");
-        Libro libro3 = new Libro("Hugo", "Yo FUI amigo del alcalde de Tocina.");
-        Libro libro4 = new Libro("Carlos Iglesia", "La isla del pequeño Jaime: El Santo");
+        Libro libro1 = new Libro("1", "1");
+        Libro libro2 = new Libro("2", "2");
+        Libro libro3 = new Libro("3", "3");
+        Libro libro4 = new Libro("4", "4");
         libro1.obtenerInformacion();
         libro1.registrarVenta(1000);
         libro2.registrarVenta(939);
@@ -22,7 +22,5 @@ public class PruebasBiblioteca {
 
         System.out.println("PRUEBA SAGAAA");
         libro1.mostrarResumenSaga();
-
-
     }
 }
